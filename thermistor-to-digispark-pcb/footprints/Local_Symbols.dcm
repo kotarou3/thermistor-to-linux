@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX6698
+D Remote and Local Temperature Sensor, TSSOP-16
+K I2C SMBus
+F https://datasheets.maximintegrated.com/en/ds/MAX6698.pdf
+$ENDCMP
+#
+#End Doc Library

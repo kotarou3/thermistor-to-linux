@@ -1,0 +1,14 @@
+[Unit]
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=modprobe i2c-tiny-usb
+ExecStart=modprobe max6697
+# # MAX6698UE38 has I2C address 0x1c
+ExecStart=bash -c "echo max6698 0x1c | tee $(grep -l i2c-tiny-usb /sys/bus/i2c/devices/*/name | sed 's|/name$|/new_device|')"
+
+[Install]
+# i2c-tiny-usb gets unloaded through a suspend, so we have to reload it after
+WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target

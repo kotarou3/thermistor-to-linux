@@ -1,0 +1,8 @@
+Comment,Designator,Footprint,LCSC
+"100nF","C1","Capacitor_SMD:C_0603_1608Metric",""
+"Conn_01x06","J1","Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",""
+"10k","R1,R2","Resistor_SMD:R_0603_1608Metric",""
+"1.5k","R3,R4,R5","Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder",""
+"390","R6,R7,R8","Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder",""
+"MAX6698","U1","Package_SO:TSSOP-16_4.4x5mm_P0.65mm",""
+"Digispark","U2","Local_Footprints:digispark",""

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Local_Symbols)(type Legacy)(uri ${KIPRJMOD}/footprints/Local_Symbols.lib)(options "")(descr ""))
+)
