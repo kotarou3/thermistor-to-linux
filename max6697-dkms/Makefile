@@ -6,7 +6,7 @@ $(KERNELRELEASE): linux-source
 	cp /boot/config-$(KERNELRELEASE) linux-source/.config
 	cp /usr/src/linux-headers-$(KERNELRELEASE)/Module.symvers linux-source/Module.symvers
 	sed -i -e 's/^# CONFIG_SENSORS_MAX6697 is not set$$/CONFIG_SENSORS_MAX6697=m/' linux-source/.config
-	$(MAKE) -C linux-source oldconfig
+	$(MAKE) -C linux-source oldconfig <&-
 	$(MAKE) -C linux-source modules_prepare
 	$(MAKE) -C linux-source M=drivers/hwmon
 

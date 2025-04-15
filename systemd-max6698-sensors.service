@@ -6,6 +6,7 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStart=modprobe i2c-tiny-usb
 ExecStart=modprobe max6697
+ExecStart=bash -c "while ! grep -q i2c-tiny-usb /sys/bus/i2c/devices/*/name; do sleep 1; done"
 # # MAX6698UE38 has I2C address 0x1c
 ExecStart=bash -c "echo max6698 0x1c | tee $(grep -l i2c-tiny-usb /sys/bus/i2c/devices/*/name | sed 's|/name$|/new_device|')"
 
